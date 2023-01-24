@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="gators.css">
+</head>
+
+<body>
+  <h1>DOM イベント  - アクティビティ「アリゲーター」</h1>
+  <h2> <font color="green">緑色のボックス</font>の入力フィールドに数字を入力して、
+    「ワニ放出！」ボタンを押すと、<font color="blue">青色のボックス</font>にその数だけ、
+    ワニの絵文字 🐊 が表示されます。</h2>
+
+  <div class="box1">
+    <input type="number" id="number2" value="0" min="0" max="100">
+    <input type="button" id="button2" value="ワニ放出！"> 
+  </div>
+
+  <div class="box2">
+    <p id="gator">    </p>
+  </div>
+
+  <script src="gators.js"></script>
+</body>
+
+</html>
