@@ -29,3 +29,38 @@ body{
     font-weight: bold;
     font-size: 60px;
 }
+
+.url{
+    /* 水平方向の中央揃え */
+    margin: 0 auto;  
+}
+
+.serachedImage {
+    /* border: solid 2px white; */
+    /* box-sizing: border-box; */
+    margin: 0 auto;  
+    text-align: center;
+    max-width: 100%; /* 最大幅 */
+    min-width: 240px; /* 最小幅 */
+ }
+ .serachedImage img { 
+    width: 25%;
+    /* width: auto; */
+}
+
+.inner{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ .resizeimage {
+    margin: 0 auto;  
+    text-align: center;
+    /* max-width: 800px; */
+    max-width: 100%; /* 最大幅 */
+    min-width: 240px; /* 最小幅 */
+ }
+ .resizeimage img { 
+    width: 100%;
+}
