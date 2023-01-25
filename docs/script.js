@@ -27,11 +27,10 @@ function butonClickGator(){
 // const targetGator = document.getElementById("button2");
 // targetGator.addEventListener("click", butonClickGator);
 
-const resOfAPI = [];
-
 function getPhotoData(){
     let word = "cat"; //検索ワード
-    let requestURL = "https://api.unsplash.com/search/photos?query="+word+"&client_id="+API_KEY["acc"];
+    // let requestURL = "https://api.unsplash.com/search/photos?query="+word+"&client_id="+API_KEY["acc"];　//検索ワード
+    let requestURL = "https://api.unsplash.com/search/photos/random"+"&client_id="+API_KEY["acc"];
     
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -39,18 +38,26 @@ function getPhotoData(){
     request.send();
 
     request.onload = function() {
-        resOfAPI = request.response;
-        console.log(resOfAPI);
-        //return resOfAPI;
+        const resOfAPI = request.response;
+        showResponseImage(resOfAPI);
+        // console.log(resOfAPI);
     }
-
-    return request;
 }
 
-function butonClickSearch(){
-    // const resOfAPI = getPhotoData();
-    getPhotoData();
+function showResponseImage(obj) {
+    const resultObj = obj['results'];
+    console.log(resultObj[0].urls.regular);
 
+    //画像表示（10枚表示：API最大数）
+    for(const element of resultObj){
+        let child = document.createElement('img');
+        child.src = element.urls.regular;
+        unsplash.append(child);
+    }
+}
+
+
+function butonClickSearch(){
     const urlRandom1 = 'https://source.unsplash.com/random';
     const urlRandom2 = 'https://source.unsplash.com/random';
     // const urlKeyword = 'https://source.unsplash.com/featured/?food,yellow';
@@ -64,6 +71,9 @@ function butonClickSearch(){
         unsplash.removeChild(unsplash.childNodes[i]);
     }
 
+    getPhotoData();
+
+
     // //画像表示(回数指定)
     // for(let i=0; i <= imgNum.value-1; i++){
     //     let child = document.createElement('img');
@@ -76,17 +86,10 @@ function butonClickSearch(){
     //     unsplash.append(child);
     // }
 
-    //画像表示（10枚表示：API最大数
-    let child = document.createElement('img');
-    //console.log(resOfAPI.response.results);
-    // for(const element of resOfAPI.response.results){
-    //     child.src = element.urls.regular;
+    // for(let i=0; i<4; i++){
+    //     child.src = resOfAPI[i].urls.regular;
     //     unsplash.append(child);
     // }
-    for(let i=0; i<4; i++){
-        child.src = resOfAPI[i].urls.regular;
-        unsplash.append(child);
-    }
 
 }
 
