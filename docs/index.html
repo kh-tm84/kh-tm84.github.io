@@ -17,7 +17,8 @@
           <h1>
             <a href="https://kh-tm84.github.io/"> Image Search App</a>
           </h1>
-          <p><a href="https://unsplash.com/ja">Unsplash API</a>を使用した写真検索</p>
+          <!-- <p><a href="https://unsplash.com/ja">Unsplash API</a>を使用した写真検索</p> -->
+          <p>高解像度写真検索 powerd by <a href="https://unsplash.com/ja">Unsplash</a></p>
         </div>
         <div class="col-1 header-buttons">
           <a href="https://github.com/kh-tm84/kh-tm84.github.io" class="site-btn">Github Here</a>
@@ -25,20 +26,30 @@
         </div>
     </div>
   </header>
-  <h2> <font color="green">緑色のボックス</font>の入力フィールドに数字を入力して、
-    「ワニ放出！」ボタンを押すと、<font color="blue">青色のボックス</font>にその数だけ、
-    ワニの絵文字 🐊 が表示されます。</h2>
+  <h2>
+    <p>写真素材サイトの<a href="https://unsplash.com/ja">Unsplash</a>が提供する<a href="https://unsplash.com/developers">Unsplash API</a>を使った画像検索アプリ</p>
+  </h2>
 
   <div class="box1">
-    <input type="text" id="form2" value="cat">
-    <input type="number" id="number2" value="0" min="0" max="100">
-    <!-- <input type="button" id="button2" value="Search">  -->
+    <h3>
+      <p id="form">Keyword <input type="text" id="form2" value="" placeholder="e.g. animal"></p>
+      <div class="box3">
+        <p>（補足）</p>
+        <p>検索単語：複数指定したい場合、カンマ区切りでキーワード入力 (ex:[ cat,black ] )</p>
+        <p>　　〃　：指示がない場合はランダム画像を表示します</p>
+        <p>　　〃　：API仕様により英単語のみ</p>
+        <p>検索回数：デモ版APIを使用しているため、1時間に50回まで検索可能</p>
+      </div>
+    </h3>
+    <h3>
+      <p id="form">Number of images <input type="number" id="number2" value="10" min="1" max="10"></p>
+      <div class="box3">
+        <p>（補足）</p>
+        <p>表示枚数：1～10で指定 ※API仕様によりMAX10枚まで</p>
+      </div>
+    </h3>
     <input type="button" id="buttonSearch" value="Search"> 
   </div>
-
-  <!-- <div class="box2">
-    <p id="gator">    </p>
-  </div> -->
 
   <div class="serachedImage">
     <div class="inner">
@@ -46,26 +57,13 @@
     </div>
   </div>
 
-  <!-- <p class="resizeimage">
-    <img src="https://source.unsplash.com/random">
-    参考：<a href="https://bagelee.com/design/about-unsplash-source/">Unsplash Sourceを使ってみよう！</a>
-  </p> -->
-
-      <!-- <img src="https://cdn.dribbble.com/users/1281272/screenshots/4515441/unicorn.gif"> -->
-    <!-- <img src="https://source.unsplash.com/bIhpiQA009k"> -->
-
-  <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="XWBqmVy" data-user="kh-tm84" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <!-- <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="html,result" data-slug-hash="XWBqmVy" data-user="kh-tm84" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
     <span>See the Pen <a href="https://codepen.io/kh-tm84/pen/XWBqmVy">
     Untitled</a> by kh-tm84 (<a href="https://codepen.io/kh-tm84">@kh-tm84</a>)
     on <a href="https://codepen.io">CodePen</a>.</span>
   </p>
-  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
-  <section aria-labelledby="Github">
-    <p>作成したコードは<a href="https://github.com/kh-tm84/kh-tm84.github.io">Github</a>で公開中</p>
-  </section>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> -->
 
   <script src="script.js"></script>
 </body>
-
 </html>
