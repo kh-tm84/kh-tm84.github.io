@@ -28,10 +28,12 @@ function butonClickGator(){
 // targetGator.addEventListener("click", butonClickGator);
 
 function getPhotoData(){
-    let word = document.getElementById("form2");
+    let word = document.getElementById("form2").value;
+    console.log("Form input word: " + word);
     //let word = "cat"; //検索ワード
     let requestURL = "https://api.unsplash.com/search/photos?query="+word+"&client_id="+API_KEY["acc"];　//検索ワード
     //let requestURL = "https://api.unsplash.com/search/photos/random"+"&client_id="+API_KEY["acc"];
+    console.log("requestURL: " + requestURL);
     
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
